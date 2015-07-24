@@ -20,11 +20,13 @@ from django.conf.urls.static import static
 from .api import UserViewSet
 from rest_framework import routers, serializers, viewsets
 from polls.api import QuestionViewSet, ChoiceViewSet
+from cards.api import CardViewSet
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'question', QuestionViewSet)
 router.register(r'choice', ChoiceViewSet)
+router.register(r'card', CardViewSet)
 
 
 urlpatterns = [
