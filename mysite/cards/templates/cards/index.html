@@ -1,0 +1,9 @@
+{% if latest_card_list %}
+    <ul>
+    {% for card in latest_card_list %}
+        <li><a href="/card/{{ card.id }}/">{{ card.card_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No cards are available.</p>
+{% endif %}

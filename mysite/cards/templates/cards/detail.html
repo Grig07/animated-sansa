@@ -1,0 +1,6 @@
+<h1>{{ card.card_text }}</h1>
+<ul>
+{% for choice in card.choice_set.all %}
+    <li>{{ choice.choice_text }}</li>
+{% endfor %}
+</ul>
